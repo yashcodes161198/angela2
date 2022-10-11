@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sec {
+    font-family: "Lato";
+}
+
+.material-icons.md-12 {
+    font-size: 12px;
+}
+
+.heading{
+    font-size: 18px;
+}
+
+.line{
+    margin: 8px 0px;
+}
+
+.main{
+    padding-right: 40px;
+}
+
+.rpanel{
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.greenbadge{
+    background-color: #009e81!important;
+    border: none!important;
+    padding-right: 0rem!important;
+    margin-right: 0.4rem!important;
+    height: 48px;
+    border-radius: 0.15rem!important;
+}
+
+span{  
+    font-size: 16px;  
+}  

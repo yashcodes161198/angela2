@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webpage</title>
+    <link rel="stylesheet" href="css/webpage.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4cd2ef40fd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body onload="details()">
+
+    <section class="sec" style="background-color: rgb(212, 212, 212);">
+
+        <!--Navbar-->
+
+        <nav class="navbar navbar-expand-sm  sticky-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">WebSiteName</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDropDown"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarDropDown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Page1</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="#">Page2</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="lg nav-item d-flex justify-content-start align-items-center">
+                        <span class="fa fa-user" style="color:grey"></span>
+                        <a class="nav-link mb-0" href="signup.html">SignUp</a>
+                    </li>
+                    <li class="lg nav-item d-flex justify-content-start align-items-center">
+                        <i class="fas fa-sign-in-alt" style="color:grey"></i>
+                        <a class="nav-link mb-0" onclick="clearStorage()" href="login.html" >Sign out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--Left panel-->
+
+        <div class="row " style="margin: 0px; padding: 8px; background-color: rgb(218, 218, 213);">
+            <div class="col-lg-3 p-2" >
+                <div class="col bg-white">
+
+                    <!--Modal-->
+
+                    <div class="position-absolute top-0 end-0">
+                        <button type="button" class="btn" onclick="loadData()" data-toggle="modal" data-target="#grid">
+                            <i class="far fa-edit"></i>
+                        </button>
+                    </div>
+
+                    <div class="modal fade" id="grid" tabindex="-1" role="dialog" aria-labelledby="title"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title dt" id="title">Your Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!--Modal Body-->
+
+                                <div class="modal-body ">
+                                    <div style="position: absolute; right: 10px;">
+                                        <img src="images/profile-default.jpg" style="width: 140px; height: 150px;" id="imgD">
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="uname">Name:</label>
+                                                <input type="text" class="form-control format" id="uname"
+                                                    placeholder="Sourabh Aggarwal" name="uname" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="des">Designation:</label>
+                                                <input type="text" class="form-control format" id="des"
+                                                    placeholder="Programmer" name="des" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="add">Address:</label>
+                                                <input type="text" class="form-control format" id="add"
+                                                    placeholder="Masjid Banda Hyderabaad" name="add" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4 ">
+                                            <div class="form-group">
+                                                <label for="cont">Contact number:</label>
+                                                <input type="tel" class="form-control format" id="cont"
+                                                    placeholder="Contact number" name="cont" min="999999999"
+                                                    max="10000000000">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ml-5">
+                                            <div class="form-group">
+                                                <label for="email">Email:</label>
+                                                <input type="email" class="form-control format" id="email"
+                                                    placeholder="sourabh.a@beehyv.com" name="email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4 ">
+                                            <div class="form-group">
+                                                <label for="link">Link:</label>
+                                                <input type="url" class="form-control format" id="linkw"
+                                                    placeholder="Enter Link" name="link" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ml-5">
+                                            <div class="form-group">
+                                                <label for="lang">Language:</label>
+                                                <input type="text" class="form-control format" id="lang"
+                                                    placeholder="English" name="lang" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-4 p-0">
+                                        <div class="form-group">
+                                            <label for="imgP" class="form-label">Profile Picture:</label>
+                                            <input type="file" class="form-control  prof form-control-sm format"
+                                                id="imgP" name="ppic">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-secondary" onclick="save()" name="save"
+                                        id="save" data-dismiss="modal">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Profile Details-->
+
+                    <div class="row m-0 p-1">
+                        <span class=" md-36 text-center mt-3">
+                            <img src="images/profile-default.jpg" alt="profile pic" class="rounded-circle img-fluid"
+                                style="width: 150px; height: 150px;" id="imgProfile">
+                        </span>
+                        <h5 class="text-center" id="userName">Sourabh Aggarwal</h5>
+                        <p class="text-center" id="designation">Programmer</p>
+                    </div>
+                    <hr />
+                    <div class="row m-0 p-1">
+                        <div class="col-1 p-0">
+                            <span class="material-icons md-12"> location_on </span>
+                        </div>
+                        <div class="col-11 p-0 m-0 d-flex align-self-center">
+                            <p class="m-0" id="location">Masjid Banda, Hyderabad</p>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-1">
+                        <div class="col-1 p-0">
+                            <span class="material-icons md-12"> phone </span>
+                        </div>
+                        <div class="col-11 p-0 m-0 d-flex align-self-center">
+                            <p class="m-0" id="phone">9413231121</p>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-1">
+                        <div class="col-1 p-0">
+                            <span class="material-icons md-12"> mail </span>
+                        </div>
+                        <div class="col-11 p-0 m-0 d-flex align-self-center">
+                            <p class="m-0" id="mail">sourabh.a@beehyv.com</p>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-1">
+                        <div class="col-1 p-0">
+                            <span class="material-icons md-12"> link </span>
+                        </div>
+                        <div class="col-11 p-0 m-0 d-flex align-self-center">
+                            <p class="m-0" id="plink">http://home.iitrpr.ac.in/</p>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-1">
+                        <div class="col-1 p-0">
+                            <span class="material-icons md-12"> language </span>
+                        </div>
+                        <div class="col-11 p-0 m-0 d-flex align-self-center">
+                            <p class="m-0" id="language">English</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row m-0">
+                        <div class="d-flex justify-content-center align-items-center p-1 ">
+                            <i class="fab fa-twitter fa-2x mr-2" style="color:aqua"></i>
+                            <i class="fab fa-soundcloud fa-2x" style="color:orange"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Right panel -->
+
+            <div class="col-lg-9 m-0 p-2">
+                <div class="col pb-3 bg-white">
+                    <div class="row ">
+                        <p class="rpanel mt-2">Background</p>
+                    </div>
+                    <hr class="rpanel" />
+
+
+                    <div class="row main p-0 m-0">
+
+                        <!--About-->
+
+                        <div class="col-1 p-1 mt-3 d-flex justify-content-center">
+                            <i class="far fa-address-card icn"></i>
+                        </div>
+                        <div class="col-11 p-0 mt-3">
+                            <div class="row">
+                                <p class="m-0 heading">ABOUT</p>
+                            </div>
+                            <hr class="line" />
+                            <div class="row">
+                                <span class="m-0 ">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                                    unde vitae ab, qui magni cum distinctio tempore? Quod
+                                    explicabo, ea provident totam, vero minima excepturi optio
+                                    culpa consequatur ducimus veritatis! Lorem, ipsum dolor sit
+                                    amet consectetur adipisicing elit. Hic, consequatur laudantium
+                                    quia amet, magnam consectetur facere blanditiis error enim
+                                    esse tempora fugit reprehenderit culpa praesentium repellendus
+                                    optio ratione dolorum voluptates!
+                                </span>
+                            </div>
+                        </div>
+
+                        <!--Work Experience-->
+
+                        <div class="col-1 p-1 mt-3 d-flex justify-content-center">
+                            <i class="far fa-building icn"></i>
+                        </div>
+                        <div class="col-11 p-0 mt-3">
+                            <div class="row ">
+                                <p class="m-0 heading">Work Experience</p>
+                            </div>
+                            <hr class="line" />
+                            <div>
+                                <p class="m-0">Project 1,
+                                    <span style="color: rgb(0, 128, 128)">Java,Angular</span>
+                                <div class="text-muted mb-2 ">
+                                    <span class="mr-1">Dec,2013-Dec,2014</span>
+                                    <i class="far fa-clock "></i>
+                                    1Year
+                                </div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore nesciunt amet
+                                architecto
+                                molestiae voluptates vero magni eius sint iusto ut nisi tenetur minima maiores veniam,
+                                aperiam eum
+                                ipsum illo.
+                                <ul type="circle mt-2">
+                                    <li>
+                                        Random point 1
+                                    </li>
+                                    <li>
+                                        Random point 2
+                                    </li>
+                                    <li>
+                                        Random point 3
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!--Skills-->
+
+                        <div class="col-1 p-1 mt-3 d-flex justify-content-center">
+                            <i class="fas fa-tools icn"></i>
+                        </div>
+                        <div class="col-11 mt-3 p-0">
+                            <div class="row">
+                                <p class="m-0 heading">Skills</p>
+                            </div>
+                            <hr class="line" />
+                            <div class="row">
+                                <span class="d-flex flex-row">
+                                    <span class="btn btn-primary btn-square-sm greenbadge mt-1"></span>
+                                    <span class="d-flex flex-column">Web Development
+                                        <div>
+                                            <span class="badge bg-primary mr-1">HTML</span>
+                                            <span class="badge bg-primary mr-1">CSS</span>
+                                            <span class="badge bg-primary">Javascript</span>
+                                        </div>
+                                    </span>
+                                </span>
+                                <div>
+                                    <hr>
+                                </div>
+                                <span class="d-flex flex-row">
+                                    <span class="btn btn-primary btn-square-sm greenbadge mt-1"></span>
+                                    <span class="d-flex flex-column">Compression
+                                        <div>
+                                            <span class="badge bg-primary mr-1">Mpeg</span>
+                                            <span class="badge bg-primary mr-1">Mp4</span>
+                                            <span class="badge bg-primary">GIF</span>
+                                        </div>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!--Education-->
+
+                        <div class="col-1 p-1 mt-3 d-flex justify-content-center">
+                            <i class="fas fa-graduation-cap icn"></i>
+                        </div>
+                        <div class="col-11 mt-3 p-0">
+                            <div class="row">
+                                <p class="m-0 heading">Education</p>
+                            </div>
+                            <hr class="line" />
+                            <div>
+                                Bachelors of Technology<span class="text-muted ">,IIT Kanpur</span>
+                                <div class="text-muted mb-2">Jun,2011 - Jan,2014 </div>
+                                <i>CGPA:Random</i>
+                                <div>
+                                    <span class="badge bg-primary mr-1">DB1101-Basic SQL</span>
+                                    <span class="badge bg-primary">CS201-Java Introduction</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Interests-->
+
+                        <div class="col-1 p-1 mt-3 d-flex justify-content-center">
+                            <i class="fas fa-heart icn"></i>
+                        </div>
+                        <div class="col-11 mt-3 p-0">
+                            <div class="row">
+                                <p class="m-0 heading">Interests</p>
+                            </div>
+                            <hr class="line" />
+
+                            <div>Wildlife
+                                <div>
+                                    <span class="badge bg-primary mr-1">Forests</span>
+                                    <span class="badge bg-primary">Unicorns</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Bottom Right button-->
+                        <div>
+                            <div class="position-absolute bottom-0 end-0">
+
+                                <img src="images/BottomRightButton.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="JS/login.js">
+    </script>
+</body>
+</html>

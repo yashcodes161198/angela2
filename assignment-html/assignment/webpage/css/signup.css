@@ -1,0 +1,24 @@
+.header{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(96, 96, 247);
+}
+.main{
+    width: 60%;
+    margin: 50px auto;
+}
+.button{
+    width:70%;
+    margin: 20px auto;
+}
+.a{
+    display: block;
+}
+
+.user{
+    font-size: 4rem;
+}
+.material-icons{
+    font-size: 2rem;
+}
+.material-icons.user { font-size: 8rem;}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body onload="checkLogin()">
+    <div class="container">
+        <div class="section">
+            <header class="header">
+    
+                <img src="images/icon.svg" alt="An icon image" width="15%" />
+                <div class="heading">
+                    <strong>PATTERNFLY</strong>
+                </div>
+            </header>
+    
+            <div class="htext">
+                This is the placeholder text, only. Use this area to place any information or introductory message about
+                your application that may be relevant for users.
+            </div>
+    
+            <div class="main-part">
+                <div class="select">
+                    <select name="Language" style="border: none;">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+                </div>
+                <div class="text">Log in to Your Account</div>
+                <form action="webpage1.html" onsubmit="return login()">
+                    <div class="details">
+                        <input type="text" id="username" name="username" placeholder="Email or phone or username" />
+                    </div>
+                    <div class="details">
+                        <input type="password" placeholder="password" name="password" id="password" />
+                    </div>
+                    <div class="info">
+                        <div class="checkbox">
+                            <div>
+                                <input type="checkbox" value="30 days login" id="css" />
+                            </div>
+                            <div>
+                                <label for="css">Keep me logged in for 30 days</label>
+                            </div>
+                        </div>
+                        <div class="pass"><a href="#">Forgot Password?</a></div>
+                    </div>
+                    <input type="submit" class="button"  value="Log in"></button>
+                </form>
+    
+                <div class="main-bottom">
+                    <p style="padding-right: 4px">Need an account?</p>
+                    <a href="signup.html"> Sign up</a>
+                </div>
+            </div>
+    
+            <footer class="footer">
+                <a>Terms of Use </a>&nbsp; &#8226 &nbsp; Help &nbsp; &#8226 &nbsp;Privacy Policy
+            </footer>
+        </div>
+    </div>
+    <script src="JS/login.js">
+    </script>
+</body>
+
+</html>

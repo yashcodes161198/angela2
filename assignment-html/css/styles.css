@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'droid_sansbold';
+    src: url('droid-sans.bold-webfont.woff2') format('woff2'),
+         url('droid-sans.bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../media/bg.jpeg");
+}
+.heading{
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 13px;
+}
+
+.random-text{
+  display: inline-block;
+  font-family: droid_sansbold;
+  text-align: center;
+  margin-left: 28%;
+  margin-right: 28%;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 13px;
+  /* width: 60rem; */
+}
+#rememberMe{
+  width: 10px;
+  height: 10px;
+}
+
+.symbol{
+  display: inline-block;
+  padding-top: 22px;
+  padding-right: 23px;
+}
+.logo{
+  height: 50px;
+}
+.brand{
+  display: inline-block;
+}
+.patternfly{
+  color: white;
+  font-family: droid_sansbold;
+  font-weight: lighter;
+  font-size: 28px;
+}

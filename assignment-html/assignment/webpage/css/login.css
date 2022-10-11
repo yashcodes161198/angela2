@@ -1,0 +1,267 @@
+body {
+    background-image: url('../images/background_image.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0%;
+}
+
+.container{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0%;
+    width:100vw;
+    height:100vh;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 0px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 270px;
+    justify-content: center;
+    margin: auto;
+}
+
+.heading {
+    display: flex;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.header strong {
+    color: white;
+    letter-spacing: 0.4rem;
+    font-size: 1.3rem;
+}
+
+.htext {
+    color: white;
+    width: 400px;
+    margin: 12px auto;
+    text-align: center;
+    font-size: 0.70rem;
+}
+
+
+
+.main-part {
+    width: 220px;
+    height: 243px;
+    background-color: rgb(255, 255, 255);
+    margin: 15px auto;
+    padding: 15px 30px 5px 30px;
+}
+
+.select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.text {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details input {
+    width: 216px;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.62rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(74, 145, 228);
+    align-items: center;
+    justify-content: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.main-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+
+}
+
+.pass {
+    display: flex;
+    justify-content: right;
+    align-self: center;
+}
+
+
+.footer {
+    color: white;
+    font-size: 0.6rem;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+#css {
+    margin: 3px 2px 3px 0px;
+}
+
+
+@media(max-width:580px) {
+    .header {
+        width: 170px;
+    }
+
+    .header strong {
+        letter-spacing: 0.3rem;
+        font-size: 1rem;
+    }
+
+    .main-part {
+        width: 200px;
+        height: 250px;
+        margin: 7px auto;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .htext {
+        width: 250px;
+        margin: 7px auto;
+        font-size: 0.7rem;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .details input {
+        width: 196px;
+        padding: 0%;
+        margin-top: 10px;
+    }
+
+    .info {
+        font-size: 0.58rem;
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    .main-bottom {
+        font-size: 0.75rem;
+    }
+
+    .footer {
+        font-size: 0.6rem;
+        width: 200px;
+        margin: 0px auto;
+    }
+
+}
+
+@media(min-width:768px) {
+    .header {
+        width: 420px;
+    }
+
+    .header strong {
+        letter-spacing: 0.8rem;
+        font-size: 2rem;
+    }
+
+    .main-part {
+        width: 400px;
+        height: 320px;
+        margin: 20px auto;
+        padding: 30px 50px 10px 50px;
+    }
+
+    .htext {
+        width: 650px;
+        margin: 7px auto;
+        font-size: 1.1rem;
+    }
+
+    .text {
+        font-size: 2rem;
+        margin-top: 15px;
+    }
+
+    .details input {
+        width: 388px;
+        padding: 4px;
+        margin-top: 18px;
+    }
+
+    .info {
+        font-size: 1rem;
+        margin-top: 16px;
+        margin-bottom: 22px;
+    }
+
+    .button {
+        margin-top: 15px;
+        margin-bottom: 15 px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .main-bottom {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        width: 400px;
+        margin: 5px auto;
+    }
+}
+
+@media print {
+    .container {
+        background-color: grey !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;   
+    }
+}

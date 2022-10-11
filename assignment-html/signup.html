@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Slabo+27px&display=swap" rel="stylesheet"> 
+    <title>Signup</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="h1">Sign Up</h1>
+    </div>
+    <hr class="hr">
+    <div class="signup">
+       <form action="" method="post">
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" class="form-control" id="firstname" placeholder="First Name" required>    
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="text" class="form-control" id="lastname" placeholder="Last Name" required>    
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" placeholder="Date of Birth" required>    
+        </div>
+        <div class="form-group">
+            <label for="employID">Employee ID:</label>
+            <input type="text" class="form-control" id="employID" placeholder="Employee ID" required>    
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="yash.kumar@beehyv.com" required>    
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="jelly22fi$h" required>    
+        </div>
+        <div class="form-group">
+            <label for="profilepicture">Profile Picture:</label>
+            <input type="file" class="form-control" id="frofilepicture" required/>    
+        </div>
+        <div class="form-group">
+            <label for="designation" class="a">Designation:</label>
+            <input type="text" class="form-control" id="designation" placeholder="Developer" required />
+        </div>
+        <div class="form-group">
+            <label for="phone">Contact Number:</label>
+            <input type="number" class="form-control" id="phone" placeholder="9413231121" pattern="[0-9]{10}" required/>
+        </div>
+        <div class="form-group">
+            <label for="address" class="a">Address:</label>
+            <input type="text" class="form-control" id="address" placeholder="Masjid Banda, Hyderabaad" required />
+        </div>
+        <div class="form-group">
+            <label for="linkw" class="a">Link:</label>
+            <input type="text" class="form-control" id="linkw" placeholder="https://www.beehyv.com/" required />
+        </div>
+        <div class="form-group">
+            <label for="language">Language: </label>
+            <select class="form-control "  id="language">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+            </select>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-primary button" value="Sign Up" ></input>
+        </div>
+       </form>
+    </div>
+    <div class="pic">
+        <img class="profile-pic" src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-Transparent.png" 
+        alt="https://idronline.org/wp-content/uploads/2021/01/Screen-Shot-2019-02-19-at-1.23.40-PM-300x300-3.jpg">
+    </div>
+    <script src="./js/signup.js"></script>
+</body>
+</html>

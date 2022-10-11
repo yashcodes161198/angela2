@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+.signup{
+    width: 60%;
+    margin-left: 150px;
+    padding-top: 30px;
+    display: inline-block;
+}
+.h1{
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #007bff;
+}
+.hr{
+    margin: 2   0px 0;
+}
+.profile-pic{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    
+}
+.pic{
+    display: inline-block;
+    float: right;
+    padding-right: 80px;
+    padding-top: 20px;
+}
+.form-label{
+    width: 100%;
+}
+.col-md-4{
+    flex: none;
+    max-width: 100%;
+}
+.btn{
+    width: 70%;
+    margin: 20px 0 80px;
+}
