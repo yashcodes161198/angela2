@@ -4,7 +4,6 @@
          url('droid-sans.bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 html{
   box-sizing: border-box;
@@ -50,6 +49,7 @@ body {
 .patternfly{
   color: white;
   font-family: droid_sansbold;
+  /* font-family: 'Roboto'; */
   font-weight: lighter;
   font-size: 28px;
 }
